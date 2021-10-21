@@ -43,6 +43,8 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     localStorage.setItem("@heat:token", token);
 
+    client.defaults.headers.common.authorization = `Bearer ${token}`;
+
     setUser(user);
   }
 
