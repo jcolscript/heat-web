@@ -50,7 +50,10 @@ export const SendMessageForm: React.FC = () => {
           value={message}
           maxLength={170}
         ></textarea>
-        <button type="submit">Enviar mensagem</button>
+        <div className={styles.sendMessageFormFooter}>
+          <span>{message.length}/170</span>
+          <button type="submit">Enviar mensagem</button>
+        </div>
       </form>
     </div>
   );
